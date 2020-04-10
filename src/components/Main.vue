@@ -6,7 +6,11 @@
     <div id="companyName">
       Seattleconsulting
     </div>
-    <img scr="../assets/s__1974364.jpg/">
+    <img
+      id="photo"
+      src="../assets/s__1974364.png"
+      alt="プロフィール写真"
+    >
   </div>
 </template>
 
@@ -20,7 +24,10 @@ export default {
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
 
   #mainSection {
+    display: block;
     background: linear-gradient(#80e1f7, #06c1e6);
+    width: 100%;
+    height: auto;
   }
 
   #userName {
@@ -40,5 +47,11 @@ export default {
 
     /* 影のサイズ考える */
     text-shadow: -1px -2px 3px #808080;
+  }
+
+  img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
   }
 </style>

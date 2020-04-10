@@ -7,7 +7,7 @@
       荒野行動８段・・・説明文
     </div>
     <div id="gitHubLabel">
-      GitHub:<a href="https://github.com/TaitoKudo/portfolio" />
+      <a href="https://github.com/TaitoKudo/portfolio">GitHub:https://github.com/TaitoKudo/portfolio</a>
     </div>
   </div>
 </template>
@@ -20,6 +20,7 @@ export default {
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
 
   #skillSection {
+    display: block;
     font-family: 'Noto Sans JP', sans-serif;
   }
 </style>
