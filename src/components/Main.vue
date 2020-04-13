@@ -3,6 +3,7 @@
     <div id="userName">
       T.Kudo
     </div>
+    <hr width="250">
     <div id="companyName">
       Seattleconsulting
     </div>
