@@ -4,7 +4,7 @@
       AboutMe見出し
     </div>
     <div id="aboutExplain">
-      説明文がここに入りますよ〜北海道生まれ・・・aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+      説明文がここに入りますよ〜北海道生まれ・・・は聞き役になりがちですが、いろんな話を聞くのは好きです！以上です、よろしくお願いします！！
     </div>
   </div>
 </template>
