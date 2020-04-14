@@ -1,10 +1,10 @@
 <template>
   <div id="drawerSection">
-    <ul id="drawetMenuSection">
-      <li>Home</li>
-      <li>AboutMe</li>
-      <li>Skillsets</li>
-      <li>Vision</li>
+    <ul id="drawerMenuSection">
+      <li><a href="#headerSection">Home</a></li>
+      <li><a href="#aboutSection">About Me</a></li>
+      <li><a href="#skillSection">SkillSets</a></li>
+      <li><a href="#visionSection">Vision</a></li>
     </ul>
   </div>
 </template>
@@ -14,11 +14,27 @@ export default {
 }
 </script>
 <style scoped>
-  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
 
   #drawerSection {
     font-family: 'Noto Sans JP', sans-serif;
+    width: 100%;
+    height: auto;
+  }
+
+  #drawerMenuSection {
+    background-color: #fff;
+    width: 100%;
+    height: auto;
+  }
+
+  li {
+    color: #a8a3a3;
+    font-weight: bold;
+    display: block;
+    border-top: solid 1px #f3f3f3;
+    border-bottom: solid 1px #f3f3f3;
+    padding: 10px 10px;
   }
 
 </style>
-ß
+
