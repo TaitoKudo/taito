@@ -8,9 +8,7 @@
       src="../assets/vector.png"
       alt="矢印"
     ></a>
-    <div id="hoge">
-      飛び先
-    </div>
+
     <div id="footerCopyright">
       ©Seattleconsulting
     </div>
@@ -23,7 +21,7 @@ export default {
     clickSmoothScroll () {
       event.preventDefault()
       this.$SmoothScroll(
-        document.querySelector('#hoge'),
+        document.querySelector('#headerSection'),
         400,
         null,
         null,

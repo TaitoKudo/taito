@@ -22,6 +22,7 @@ export default {
     width: 100%;
     height: auto;
     font-family: 'Noto Sans JP', sans-serif;
+    padding: 30px;
   }
 
   #visionTitle {

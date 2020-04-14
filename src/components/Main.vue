@@ -3,7 +3,6 @@
     <div id="userName">
       T.Kudo
     </div>
-    <hr width="250">
     <div id="companyName">
       Seattleconsulting
     </div>
@@ -29,6 +28,7 @@ export default {
     background: linear-gradient(#80e1f7, #06c1e6);
     width: 100%;
     height: auto;
+    padding: 30px;
   }
 
   #userName {
@@ -36,6 +36,10 @@ export default {
     font-family: 'Noto Sans JP', sans-serif;
     font-weight: bold;
     font-size: 18pt;
+    border-bottom: 1px solid white;
+    margin: 0 auto;
+    width: 300px;
+
 
     /* 影のサイズ考える */
     text-shadow: -1px -2px 3px #808080;
@@ -45,6 +49,7 @@ export default {
     color: #fff;
     font-weight: bold;
     font-size: 18pt;
+
 
     /* 影のサイズ考える */
     text-shadow: -1px -2px 3px #808080;

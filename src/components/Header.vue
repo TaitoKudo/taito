@@ -16,18 +16,25 @@
         for="nav-input"
       />
       <div id="nav-content">
-        ここに中身を入れる
+        <span id="lineSpan" />
+        <img
+          id="batuClose"
+          src="../assets/batu.png"
+          alt="閉じる"
+        >
+        <Menu />
       </div>
     </div>
   </div>
 </template>
 
 <script>
+  import Menu from "./Menu";
   export default {
+    components: {
+      Menu
+    }
   }
-
-
-
 </script>
 
 <style lang="scss">
@@ -41,21 +48,22 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin: 0 auto;
+  margin: auto;
   width: 800px;
   background-color: #f3f3f3;
-  padding: 10px;
+  padding-top: 15px;
+  padding-left: 10px;
 }
 
 #nav-drawer {
   position: relative;
   text-align: left;
+  margin-left: 0;
 }
 
 /* チェックボックス等は非表示に */
 .nav-unshown {
   display: none;
-  text-align: left;
 }
 
 /* アイコンのスペース */
@@ -63,7 +71,6 @@
   display: inline-block;
   width: 30px;
   height: 22px;
-  text-align: left;
 }
 
 /* ハンバーガーアイコンをCSSだけで表現 */
@@ -100,6 +107,18 @@
   background: black;
   opacity: 0;
   transition: 0.3s ease-in-out;
+}
+
+#lineSpan {
+  background: #f3f3f3;
+  width: auto;
+  height: 100px;
+}
+
+#batuClose {
+  background: #f3f3f3;
+  width: 20px;
+  height: 20px;
 }
 
 /* 中身 */
