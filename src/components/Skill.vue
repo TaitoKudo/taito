@@ -1,7 +1,7 @@
 <template>
   <div id="skillSection">
     <div id="skillTitle">
-      SkillSet見出し
+      Skill Set
     </div>
     <div id="skillExplain">
       荒野行動８段・・・説明文
@@ -10,49 +10,99 @@
       <a href="https://github.com/TaitoKudo/portfolio">GitHub:https://github.com/TaitoKudo/portfolio</a>
     </div>
     <div id="skillList">
-      <!-- Link Category-->
-      <div id="front_end">
+      <div
+        id="front_end"
+        @click="setCurrentChart('front')"
+      >
         Front-end
       </div>
-      <div id="back_end">
+      <div
+        id="back_end"
+        @click="setCurrentChart('back')"
+      >
         Back-end
       </div>
-      <div id="dev_ops">
+      <div
+        id="dev_ops"
+        @click="setCurrentChart('devOps')"
+      >
         DevOps
       </div>
-      <ul class="frontEnd">
+      <ul
+        id="frontEnd"
+        :class="{'front-change':isFrontActive}"
+      >
         <li>HTML</li>
         <li>CSS</li>
         <li>Javascript</li>
         <li>SCSS</li>
         <li>Vue</li>
       </ul>
-      <ul class="backEnd">
+      <ul
+        id="backEnd"
+        :class="{'back-change':isBackActive}"
+      >
         <li>Java</li>
         <li>Ruby</li>
         <li>RubyOnRails</li>
         <li>MySQL</li>
       </ul>
-      <ul class="devOps">
+      <ul
+        id="devOps"
+        :class="{'dev-change':isDevOpsActive}"
+      >
         <li>Linux</li>
         <li>Node</li>
         <li>Git</li>
         <li>GitHub</li>
-        <li>FireBase</li>
+        <li>Firebase</li>
       </ul>
-    </div>
-    <hr width="250">
-    <div id="skillGraph">
-      <chart />
+      <hr width="250">
+      <div id="skillGraph">
+        <div v-if="isFrontActive">
+          <FrontChart />
+        </div>
+        <div v-if="isBackActive">
+          <BackChart />
+        </div>
+        <div v-if="isDevActive">
+          <DevChart />
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import Chart from './Chart.vue';
+import FrontChart from './FrontChart.vue'
+import BackChart from './BackChart.vue'
+import DevChart from './DevChart.vue'
 export default {
   components: {
-    Chart
+    FrontChart,
+    BackChart,
+    DevChart
+  },
+  data(){
+    return{
+      currentChart:'front'
+    }
+  },
+  computed: {
+    isFrontActive(){
+      return this.currentChart=='front';
+    },
+    isBackActive(){
+      return this.currentChart=='back';
+    },
+    isDevActive(){
+      return this.currentChart=='devOps';
+    },
+  },
+  methods: {
+    setCurrentChart(chart){
+      this.currentChart = chart;
+    }
   }
 }
 </script>
@@ -97,19 +147,19 @@ export default {
   }
 
   #front_end {
-    color: rgba(255, 0, 0, 0.75);
+    color: rgba(181, 26, 26, 0.75);
     display: inline-block;
     padding: 10px;
   }
 
   #back_end {
-    color: rgba(0, 255, 0, 0.75);
+    color: rgba(15, 136, 57, 0.75);
     display: inline-block;
     padding: 10px;
   }
 
   #dev_ops {
-    color: rgba(0, 0, 255, 0.75);
+    color: rgba(87, 16, 131, 0.75);
     display: inline-block;
     padding: 10px;
   }
@@ -125,21 +175,22 @@ export default {
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.32);
   }
 
-  .frontEnd {
-    color: rgba(255, 0, 0, 0.75);
+  #frontEnd {
+    color: rgba(181, 26, 26, 0.75);
   }
 
-  .backEnd {
-    color: rgba(0, 255, 0, 0.75);
+  #backEnd {
+    color: rgba(15, 136, 57, 0.75);
   }
 
-  .devOps {
-    color: rgba(0, 0, 255, 0.75);
+  #devOps {
+    color: rgba(87, 16, 131, 0.75);
   }
 
   #skillGraph {
     margin: 0 auto;
     width: 50%;
+    height: auto;
   }
 
 </style>

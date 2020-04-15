@@ -1,7 +1,7 @@
 <template>
   <div id="aboutSection">
     <div id="aboutTitle">
-      AboutMe見出し
+      About Me
     </div>
     <div id="aboutExplain">
       説明文がここに入りますよ〜北海道生まれ・・・は聞き役になりがちですが、いろんな話を聞くのは好きです！以上です、よろしくお願いします！！
