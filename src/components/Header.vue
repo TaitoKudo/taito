@@ -3,6 +3,7 @@
     <div id="nav-drawer">
       <input
         id="nav-input"
+        v-model="checked"
         type="checkbox"
         class="nav-unshown"
       >
@@ -17,7 +18,7 @@
       />
       <div id="nav-content">
         <span id="lineSpan" />
-        <Menu />
+        <Menu @close="closeMenuEvent" />
       </div>
     </div>
   </div>
@@ -28,6 +29,16 @@
   export default {
     components: {
       Menu
+    },
+    data() {
+      return {
+        checked:false
+      }
+    },
+    methods:{
+      closeMenuEvent() {
+        this.checked=false
+      }
     }
   }
 </script>

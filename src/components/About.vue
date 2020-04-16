@@ -4,7 +4,10 @@
       About Me
     </div>
     <div id="aboutExplain">
-      説明文がここに入りますよ〜北海道生まれ・・・は聞き役になりがちですが、いろんな話を聞くのは好きです！以上です、よろしくお願いします！！
+      北海道出身。青森県の弘前大学で化学を専攻。
+      アルバイトでは大学生協で保険や家具、パソコンなどの商品を販売する。その経験で、ニーズを汲み取り、お客様の目線に立って商品を提案するをする重要性を学ぶ。
+      大学生活を通して、チームの活動することで様々な面で良い効果もたらすと実感する。
+      大学卒業後はTeamTechに共感してシアトルコンサルティングに入社。TeamTechの浸透やITの先端技術で課題解決ができる人材を目指す。
     </div>
   </div>
 </template>
@@ -21,7 +24,7 @@ export default {
     background-color: #f5f5f5;
     width: 100%;
     height: auto;
-    padding: 30px;
+    padding: 10px 30px 30px 30px;
   }
 
   #aboutTitle {
@@ -37,6 +40,8 @@ export default {
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 12pt;
     word-break: normal;
+    width: 90%;
+    padding-left: 10%;
 
     /* 問題あり？ */
     line-height: 1.25em;

@@ -43,7 +43,7 @@ export default {
   }
 
   #footerCopyright {
-    color: #fff;
+    color: rgb(8, 8, 8);
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 18pt;
 

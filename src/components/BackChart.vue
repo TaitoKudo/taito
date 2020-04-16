@@ -11,7 +11,7 @@ export default {
         datasets: [
           {
             label: 'Bar Dataset',
-            data: [2, 4, 4, 4],
+            data: [1, 1, 1, 1],
             backgroundColor: [
               'rgba(15, 136, 57, 0.25)',
             ],
@@ -33,6 +33,9 @@ export default {
             max:5,
             min:0,
           }
+        },
+        legend: {
+          display: false,
         }
       }
     }
