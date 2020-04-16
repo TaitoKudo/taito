@@ -1,10 +1,28 @@
 <template>
   <div id="drawerSection">
-    <ul id="drawerMenuSection">
-      <li><a href="#headerSection">Home</a></li>
-      <li><a href="#aboutSection">About Me</a></li>
-      <li><a href="#skillSection">SkillSets</a></li>
-      <li><a href="#visionSection">Vision</a></li>
+    <div id="labelBatu">
+      <label for="nav-input">
+        <img
+          id="batuClose"
+          src="../assets/batu.png"
+          alt="閉じる"
+        >
+      </label>
+    </div>
+    <ul
+      id="drawerMenuSection"
+      style="list-style: disc;"
+    >
+      <label
+        id="nav-close"
+        class="nav-unshown"
+        for="nav-input"
+      >
+        <li><a href="#headerSection">Home</a></li>
+        <li><a href="#aboutSection">About Me</a></li>
+        <li><a href="#skillSection">Skill Sets</a></li>
+        <li><a href="#visionSection">Vision</a></li>
+      </label>
     </ul>
   </div>
 </template>
@@ -14,11 +32,22 @@ export default {
 }
 </script>
 <style scoped>
-
   #drawerSection {
     font-family: 'Noto Sans JP', sans-serif;
     width: 100%;
     height: auto;
+  }
+
+  #labelBatu {
+    text-align: right;
+    padding: 10px 10px;
+    background: #f3f3f3;
+  }
+
+  img {
+    width: 25px;
+    height: 25px;
+    background: #f3f3f3;
   }
 
   #drawerMenuSection {
@@ -33,8 +62,8 @@ export default {
     display: block;
     border-top: solid 1px #f3f3f3;
     border-bottom: solid 1px #f3f3f3;
-    padding: 10px 10px;
+    padding: 10px 100px 10px 5px;
+    white-space: nowrap;
   }
-
 </style>
 

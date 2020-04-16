@@ -17,11 +17,6 @@
       />
       <div id="nav-content">
         <span id="lineSpan" />
-        <img
-          id="batuClose"
-          src="../assets/batu.png"
-          alt="閉じる"
-        >
         <Menu />
       </div>
     </div>
@@ -115,12 +110,6 @@
   height: 100px;
 }
 
-#batuClose {
-  background: #f3f3f3;
-  width: 20px;
-  height: 20px;
-}
-
 /* 中身 */
 #nav-content {
   overflow: auto;
@@ -129,7 +118,7 @@
   left: 0;
   z-index: 9999;/* 最前面に */
   width: 90%;/* 右側に隙間を作る（閉じるカバーを表示） */
-  max-width: 330px;/* 最大幅（調整してください） */
+  max-width: 200px;/* 最大幅（調整してください） */
   height: 100%;
   background: #fff;/* 背景色 */
   transition: 0.3s ease-in-out;/* 滑らかに表示 */
