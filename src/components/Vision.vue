@@ -4,7 +4,8 @@
       Vision
     </div>
     <div id="visionExplain">
-      説明文
+      IT技術の活用で、日常に潜む不便やニーズを解消して生活をより豊かにできる力を身につけたいと考えています。AIやブロックチェーン、クラウドなどに興味があり先端技術を駆使してお客様の課題を解決したいです。
+      また、世の中にTeamTechを浸透させてイキイキ働く人を増やすこと、生産性を上げることを目指しています。
     </div>
   </div>
 </template>
@@ -22,6 +23,7 @@ export default {
     width: 100%;
     height: auto;
     font-family: 'Noto Sans JP', sans-serif;
+    padding: 10px 30px 30px 30px;
   }
 
   #visionTitle {
@@ -36,6 +38,8 @@ export default {
     color: #707070;
     font-size: 12pt;
     word-break: normal;
+    width: 90%;
+    padding-left: 10%;
 
     /* 問題あり？ */
     line-height: 1.25em;

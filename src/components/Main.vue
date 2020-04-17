@@ -8,7 +8,7 @@
     </div>
     <img
       id="photo"
-      src="../assets/s__1974364.png"
+      src="../assets/p_photo.png"
       alt="プロフィール写真"
     >
   </div>
@@ -28,6 +28,7 @@ export default {
     background: linear-gradient(#80e1f7, #06c1e6);
     width: 100%;
     height: auto;
+    padding: 10px 30px 40px 30px;
   }
 
   #userName {
@@ -35,6 +36,10 @@ export default {
     font-family: 'Noto Sans JP', sans-serif;
     font-weight: bold;
     font-size: 18pt;
+    border-bottom: 1px solid white;
+    margin: 0 auto;
+    width: 300px;
+
 
     /* 影のサイズ考える */
     text-shadow: -1px -2px 3px #808080;
@@ -44,14 +49,16 @@ export default {
     color: #fff;
     font-weight: bold;
     font-size: 18pt;
+    padding: 5px;
+
 
     /* 影のサイズ考える */
     text-shadow: -1px -2px 3px #808080;
   }
 
   img {
-    width: 64px;
-    height: 64px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
   }
 </style>

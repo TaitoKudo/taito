@@ -1,26 +1,27 @@
 <template>
   <div id="footerSection">
+    <a
+      href="#"
+      @click="clickSmoothScroll()"
+    ><img
+      id="arrow"
+      src="../assets/vector.png"
+      alt="矢印"
+    ></a>
+
     <div id="footerCopyright">
       ©Seattleconsulting
     </div>
     <img src="">
-    <a
-      href="#"
-      @click="clickSmoothScroll()"
-    >飛ばし先</a>
-    <div id="hoge">
-      飛び先
-    </div>
   </div>
 </template>
 <script>
 export default {
-  name: "App",
   methods: {
     clickSmoothScroll () {
       event.preventDefault()
       this.$SmoothScroll(
-        document.querySelector('#hoge'),
+        document.querySelector('#headerSection'),
         400,
         null,
         null,
@@ -30,8 +31,9 @@ export default {
   }
 }
 </script>
+
 <style scoped>
-  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+
 
   #footerSection {
     display: block;
@@ -41,11 +43,18 @@ export default {
   }
 
   #footerCopyright {
-    color: #fff;
+    color: rgb(8, 8, 8);
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 18pt;
 
     /* 影のサイズ考える */
     text-shadow: -1px -2px 3px #808080;
+  }
+
+  #arrow {
+    top: -20px;
+    position: relative;
+    width: 40px;
+    height: 40px;
   }
 </style>

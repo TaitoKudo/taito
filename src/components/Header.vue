@@ -3,6 +3,7 @@
     <div id="nav-drawer">
       <input
         id="nav-input"
+        v-model="checked"
         type="checkbox"
         class="nav-unshown"
       >
@@ -16,18 +17,30 @@
         for="nav-input"
       />
       <div id="nav-content">
-        ここに中身を入れる
+        <span id="lineSpan" />
+        <Menu @close="closeMenuEvent" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
+  import Menu from "./Menu";
   export default {
+    components: {
+      Menu
+    },
+    data() {
+      return {
+        checked:false
+      }
+    },
+    methods:{
+      closeMenuEvent() {
+        this.checked=false
+      }
+    }
   }
-
-
-
 </script>
 
 <style lang="scss">
@@ -41,21 +54,22 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin: 0 auto;
+  margin: auto;
   width: 800px;
   background-color: #f3f3f3;
-  padding: 10px;
+  padding-top: 15px;
+  padding-left: 10px;
 }
 
 #nav-drawer {
   position: relative;
   text-align: left;
+  margin-left: 0;
 }
 
 /* チェックボックス等は非表示に */
 .nav-unshown {
   display: none;
-  text-align: left;
 }
 
 /* アイコンのスペース */
@@ -63,7 +77,6 @@
   display: inline-block;
   width: 30px;
   height: 22px;
-  text-align: left;
 }
 
 /* ハンバーガーアイコンをCSSだけで表現 */
@@ -102,6 +115,12 @@
   transition: 0.3s ease-in-out;
 }
 
+#lineSpan {
+  background: #f3f3f3;
+  width: auto;
+  height: 100px;
+}
+
 /* 中身 */
 #nav-content {
   overflow: auto;
@@ -110,7 +129,7 @@
   left: 0;
   z-index: 9999;/* 最前面に */
   width: 90%;/* 右側に隙間を作る（閉じるカバーを表示） */
-  max-width: 330px;/* 最大幅（調整してください） */
+  max-width: 200px;/* 最大幅（調整してください） */
   height: 100%;
   background: #fff;/* 背景色 */
   transition: 0.3s ease-in-out;/* 滑らかに表示 */

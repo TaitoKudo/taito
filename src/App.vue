@@ -6,7 +6,6 @@
     <Skill />
     <Vision />
     <Footer />
-    <Menu />
   </div>
 </template>
 
@@ -17,7 +16,6 @@
   import Skill from './components/Skill.vue'
   import Vision from './components/Vision.vue'
   import Footer from './components/Footer.vue'
-  import Menu from './components/Menu.vue'
   export default {
     components: {
       Header,
@@ -25,8 +23,7 @@
       About,
       Skill,
       Vision,
-      Footer,
-      Menu
+      Footer
   }
 }
 </script>
@@ -34,6 +31,8 @@
 
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
