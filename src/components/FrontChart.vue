@@ -10,8 +10,8 @@ export default {
         labels: ['HTML', 'CSS', 'Javascript', 'SCSS','Vue'],
         datasets: [
           {
-            label: 'Front-end',
-            data: [2, 4, 4, 4, 5],
+            label: '',
+            data: [3, 3, 3, 1, 3],
             backgroundColor: [
               'rgba(181, 26, 26, 0.25)',
             ],
@@ -34,6 +34,9 @@ export default {
             max:5,
             min:0,
           }
+        },
+        legend: {
+          display: false,
         }
       }
     }

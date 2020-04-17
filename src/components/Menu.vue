@@ -13,24 +13,32 @@
       id="drawerMenuSection"
       style="list-style: disc;"
     >
-      <label
-        id="nav-close"
-        class="nav-unshown"
-        for="nav-input"
-      >
-        <li><a href="#headerSection">Home</a></li>
-        <li><a href="#aboutSection">About Me</a></li>
-        <li><a href="#skillSection">Skill Sets</a></li>
-        <li><a href="#visionSection">Vision</a></li>
-      </label>
+      <li @click="closeMenu">
+        <a href="#headerSection">Home</a>
+      </li>
+      <li @click="closeMenu">
+        <a href="#aboutSection">About Me</a>
+      </li>
+      <li @click="closeMenu">
+        <a href="#skillSection">Skill Set</a>
+      </li>
+      <li @click="closeMenu">
+        <a href="#visionSection">Vision</a>
+      </li>
     </ul>
   </div>
 </template>
 <script>
 export default {
+  methods:{
+    closeMenu() {
+      this.$emit('close')
+    }
+  }
 
 }
 </script>
+
 <style scoped>
   #drawerSection {
     font-family: 'Noto Sans JP', sans-serif;
@@ -40,7 +48,7 @@ export default {
 
   #labelBatu {
     text-align: right;
-    padding: 10px 10px;
+    padding: 8px 10px;
     background: #f3f3f3;
   }
 
@@ -64,6 +72,11 @@ export default {
     border-bottom: solid 1px #f3f3f3;
     padding: 10px 100px 10px 5px;
     white-space: nowrap;
+  }
+
+  a {
+    color: #a8a3a3;
+    font-weight: bold;
   }
 </style>
 

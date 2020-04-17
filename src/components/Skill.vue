@@ -4,10 +4,13 @@
       Skill Set
     </div>
     <div id="skillExplain">
-      荒野行動８段・・・説明文
+      スキルをまとめました。特にFront-endはポートフォリオの実装を通して力が身につきました。
+      DevOpsは新入社員研修における環境構築や、大学時代の研究活動で使用しました。
+      今後は広く基礎知識を身につけて土台を固めたいです。
     </div>
     <div id="gitHubLabel">
-      <a href="https://github.com/TaitoKudo/portfolio">GitHub:https://github.com/TaitoKudo/portfolio</a>
+      GitHub:
+      <a href="https://github.com/TaitoKudo/portfolio">https://github.com/TaitoKudo/portfolio</a>
     </div>
     <div id="skillList">
       <div
@@ -49,7 +52,7 @@
       </ul>
       <ul
         id="devOps"
-        :class="{'dev-change':isDevOpsActive}"
+        :class="{'dev-change':isDevActive}"
       >
         <li>Linux</li>
         <li>Node</li>
@@ -57,7 +60,7 @@
         <li>GitHub</li>
         <li>Firebase</li>
       </ul>
-      <hr width="250">
+      <hr width="600">
       <div id="skillGraph">
         <div v-if="isFrontActive">
           <FrontChart />
@@ -97,7 +100,7 @@ export default {
     },
     isDevActive(){
       return this.currentChart=='devOps';
-    },
+    }
   },
   methods: {
     setCurrentChart(chart){
@@ -115,7 +118,7 @@ export default {
     width: 100%;
     height: auto;
     font-family: 'Noto Sans JP', sans-serif;
-    padding: 30px;
+    padding: 10px 30px 30px 30px;
   }
 
   #skillTitle {
@@ -130,13 +133,22 @@ export default {
     color: #707070;
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 12pt;
-    word-break: normal;
+    word-break: o-all;
+    width: 90%;
+    padding-left: 10%;
+    padding-bottom: 5px;
 
     /* 問題あり？ */
     line-height: 1.25em;
   }
 
   #gitHubLabel {
+    color: #20879f;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 12pt;
+  }
+
+  a {
     color: #20879f;
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 12pt;
@@ -152,16 +164,28 @@ export default {
     padding: 10px;
   }
 
+  #front_end:hover {
+    text-decoration: underline;
+  }
+
   #back_end {
     color: rgba(15, 136, 57, 0.75);
     display: inline-block;
     padding: 10px;
   }
 
+  #back_end:hover {
+    text-decoration: underline;
+  }
+
   #dev_ops {
     color: rgba(87, 16, 131, 0.75);
     display: inline-block;
     padding: 10px;
+  }
+
+  #dev_ops:hover {
+    text-decoration: underline;
   }
 
   li {
@@ -185,6 +209,18 @@ export default {
 
   #devOps {
     color: rgba(87, 16, 131, 0.75);
+  }
+
+  ul.front-change li {
+    background-color: rgba(181, 26, 26, 0.25);
+  }
+
+  ul.back-change li {
+    background-color: rgba(15, 136, 57, 0.25);
+  }
+
+  ul.dev-change li {
+    background-color: rgba(87, 16, 131, 0.25);
   }
 
   #skillGraph {
