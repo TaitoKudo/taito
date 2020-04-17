@@ -27,6 +27,9 @@ export default {
       },
       options: {
         scale: {
+          pointLabels: {
+            fontSize: 22,
+          },
           ticks:{
             stepSize: 1,
             beginAtZero: true,
