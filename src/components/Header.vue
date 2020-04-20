@@ -54,11 +54,12 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin: auto;
+  margin: 0;
   width: 800px;
   background-color: #f3f3f3;
   padding-top: 15px;
   padding-left: 10px;
+  position: fixed;
 }
 
 #nav-drawer {

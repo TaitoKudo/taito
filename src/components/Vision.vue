@@ -31,7 +31,7 @@ export default {
     font-family: 'Noto Sans JP', sans-serif;
     font-weight: bold;
     font-size: 18pt;
-    text-shadow: -1px -2px 3px #808080;
+    text-shadow: -2px 2px 3px #808080;
   }
 
   #visionExplain {

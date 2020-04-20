@@ -4,9 +4,9 @@
       Skill Set
     </div>
     <div id="skillExplain">
-      スキルをまとめました。特にFront-endはポートフォリオの実装を通して力が身につきました。
+      スキルをまとめました。特にFront-endはポートフォリオの実装を通して力を身につきました。
       DevOpsは新入社員研修における環境構築や、大学時代の研究活動で使用しました。
-      今後は広く基礎知識を身につけて土台を固めたいです。
+      今後は広く基礎知識を身につけて土台を固めます。
     </div>
     <div id="gitHubLabel">
       GitHub:
@@ -31,35 +31,37 @@
       >
         DevOps
       </div>
-      <ul
-        id="frontEnd"
-        :class="{'front-change':isFrontActive}"
-      >
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>Javascript</li>
-        <li>SCSS</li>
-        <li>Vue</li>
-      </ul>
-      <ul
-        id="backEnd"
-        :class="{'back-change':isBackActive}"
-      >
-        <li>Java</li>
-        <li>Ruby</li>
-        <li>RubyOnRails</li>
-        <li>MySQL</li>
-      </ul>
-      <ul
-        id="devOps"
-        :class="{'dev-change':isDevActive}"
-      >
-        <li>Linux</li>
-        <li>Node</li>
-        <li>Git</li>
-        <li>GitHub</li>
-        <li>Firebase</li>
-      </ul>
+      <dev id="skillslist">
+        <ul
+          id="frontEnd"
+          :class="{'front-change':isFrontActive}"
+        >
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Javascript</li>
+          <li>SCSS</li>
+          <li>Vue</li>
+        </ul>
+        <ul
+          id="backEnd"
+          :class="{'back-change':isBackActive}"
+        >
+          <li>Java</li>
+          <li>Ruby</li>
+          <li>RubyOnRails</li>
+          <li>MySQL</li>
+        </ul>
+        <ul
+          id="devOps"
+          :class="{'dev-change':isDevActive}"
+        >
+          <li>Linux</li>
+          <li>Node</li>
+          <li>Git</li>
+          <li>GitHub</li>
+          <li>Firebase</li>
+        </ul>
+      </dev>
       <hr width="600">
       <div id="skillGraph">
         <div v-if="isFrontActive">
@@ -126,7 +128,7 @@ export default {
     font-family: 'Noto Sans JP', sans-serif;
     font-weight: bold;
     font-size: 18pt;
-    text-shadow: -1px -2px 3px #808080;
+    text-shadow: -2px 2px 3px #808080;
   }
 
   #skillExplain {
@@ -137,8 +139,6 @@ export default {
     width: 90%;
     padding-left: 10%;
     padding-bottom: 5px;
-
-    /* 問題あり？ */
     line-height: 1.25em;
   }
 
@@ -156,12 +156,14 @@ export default {
 
   #skillList {
     font-weight: bold;
+    margin-left: -40px;
   }
 
   #front_end {
     color: rgba(181, 26, 26, 0.75);
     display: inline-block;
     padding: 10px;
+    cursor: pointer;
   }
 
   #front_end:hover {
@@ -172,6 +174,7 @@ export default {
     color: rgba(15, 136, 57, 0.75);
     display: inline-block;
     padding: 10px;
+    cursor: pointer;
   }
 
   #back_end:hover {
@@ -182,10 +185,15 @@ export default {
     color: rgba(87, 16, 131, 0.75);
     display: inline-block;
     padding: 10px;
+    cursor: pointer;
   }
 
   #dev_ops:hover {
     text-decoration: underline;
+  }
+
+  #skillslist {
+    margin-left: -30px;
   }
 
   li {

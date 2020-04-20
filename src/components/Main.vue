@@ -28,37 +28,31 @@ export default {
     background: linear-gradient(#80e1f7, #06c1e6);
     width: 100%;
     height: auto;
-    padding: 10px 30px 40px 30px;
+    padding: 60px 30px 40px 30px;
   }
 
   #userName {
     color: #fff;
     font-family: 'Noto Sans JP', sans-serif;
     font-weight: bold;
-    font-size: 18pt;
+    font-size: 25pt;
     border-bottom: 1px solid white;
     margin: 0 auto;
     width: 300px;
-
-
-    /* 影のサイズ考える */
-    text-shadow: -1px -2px 3px #808080;
+    text-shadow: -2px 2px 3px #808080;
   }
 
   #companyName {
     color: #fff;
     font-weight: bold;
-    font-size: 18pt;
+    font-size: 25pt;
     padding: 5px;
-
-
-    /* 影のサイズ考える */
-    text-shadow: -1px -2px 3px #808080;
+    text-shadow: -2px 2px 3px #808080;
   }
 
   img {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
   }
 </style>
