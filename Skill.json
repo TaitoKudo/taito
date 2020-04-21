@@ -1,19 +1,59 @@
 {
   "skills": [
     {
-      "category": "front-end",
-      "name": "HTML",
-      "score": 3
-    },
-    {
-      "category": "back-end",
-      "name": "Java",
-      "score": 3
-    },
-    {
-      "category": "devops",
-      "name": "github",
-      "score": 2
+      "category": {
+
+        "front-end": {
+          "HTML": {
+            "score": 3
+          },
+          "CSS": {
+            "score": 3
+          },
+          "Javascript": {
+            "score": 3
+          },
+          "SCSS": {
+            "score": 1
+          },
+          "Vue": {
+            "score": 3
+          }
+        },
+        "back-end": {
+          "Java": {
+            "score": 1
+          },
+          "Ruby": {
+            "score": 1
+          },
+          "RubyOnRails": {
+            "score": 1
+          },
+          "MySQL": {
+            "score": 1
+          }
+        },
+        "devops": {
+          "Linux": {
+            "score": 3
+          },
+          "Node": {
+            "score": 2
+          },
+          "Git": {
+            "score": 4
+          },
+          "GitHub": {
+            "score": 4
+          },
+          "Firebase": {
+            "score": 3
+          }
+        }
+      }
+
+
     }
   ]
 }
