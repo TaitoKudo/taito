@@ -3,20 +3,117 @@ import Vuex from 'vuex';
 import axios from 'axios';
 
 Vue.use(Vuex);
+Vue.use(axios)
 
 export default new Vuex.Store({
   //state:コンポーネントでいうdata
+  //statuをskillcategoriesと定義
   state: {
-    skillcategories: [],
+    skillCategories: [],
+    loaded: false
   },
 
   //getters:コンポーネントでいうcomputed的なもの
+  //gettersを
   getters: {
-      getSkills: (state) => (category) => {
-        if (state.skillcategories.length > 0) {
-          return state.skillcategories.find((skill) => skill.category===category);
-        }
-      return [];
+    skillName: (state) => {
+      const skillNameArray =[]
+      if(state.skillCategories[0]){
+        /* eslint-disable no-debugger */
+        debugger
+        state.skillCategories[0].skill.forEach((names) => {
+          skillNameArray.push(names.name)
+        })
+      }
+      return skillNameArray
+    },
+    skillScore: (state) => {
+      const skillScoreArray =[]
+      if(state.skillCategories[0]){
+        /* eslint-disable no-debugger */
+        debugger
+        state.skillCategories[0].skill.forEach((scores) => {
+          skillScoreArray.push(scores.score)
+        })
+      }
+      return skillScoreArray
+    },
+    skillBackgroundColor: (state) => {
+      const skillBGArray =[]
+      if(state.skillCategories[0]){
+        /* eslint-disable no-debugger */
+        debugger
+        state.skillCategories[0].skill.forEach((backgroundColors) => {
+          skillBGArray.push(backgroundColors.backgroundColor)
+        })
+      }
+      return skillBGArray
+    },
+    skillNameB: (state) => {
+      const skillNameArray =[]
+      if(state.skillCategories[1]){
+        /* eslint-disable no-debugger */
+        debugger
+        state.skillCategories[1].skill.forEach((names) => {
+          skillNameArray.push(names.name)
+        })
+      }
+      return skillNameArray
+    },
+    skillScoreB: (state) => {
+      const skillScoreArray =[]
+      if(state.skillCategories[1]){
+        /* eslint-disable no-debugger */
+        debugger
+        state.skillCategories[1].skill.forEach((scores) => {
+          skillScoreArray.push(scores.score)
+        })
+      }
+      return skillScoreArray
+    },
+    skillBackgroundColorB: (state) => {
+      const skillBGArray =[]
+      if(state.skillCategories[1]){
+        /* eslint-disable no-debugger */
+        debugger
+        state.skillCategories[1].skill.forEach((backgroundColors) => {
+          skillBGArray.push(backgroundColors.backgroundColor)
+        })
+      }
+      return skillBGArray
+    },
+    skillNameD: (state) => {
+      const skillNameArray =[]
+      if(state.skillCategories[2]){
+        /* eslint-disable no-debugger */
+        debugger
+        state.skillCategories[2].skill.forEach((names) => {
+          skillNameArray.push(names.name)
+        })
+      }
+      return skillNameArray
+    },
+    skillScoreD: (state) => {
+      const skillScoreArray =[]
+      if(state.skillCategories[2]){
+        /* eslint-disable no-debugger */
+        debugger
+        state.skillCategories[2].skill.forEach((scores) => {
+          skillScoreArray.push(scores.score)
+        })
+      }
+      return skillScoreArray
+    },
+    skillBackgroundColorD: (state) => {
+      const skillBGArray =[]
+      if(state.skillCategories[2]){
+        /* eslint-disable no-debugger */
+        debugger
+        state.skillCategories[2].skill.forEach((backgroundColors) => {
+          skillBGArray.push(backgroundColors.backgroundColor)
+        })
+      }
+      return skillBGArray
     },
   },
 
@@ -27,18 +124,27 @@ export default new Vuex.Store({
     //payloadはオブジェクトにするべき（いっぱい入れれるし）
     setSkillCategories(state, payload) {
       state.skillCategories = payload.skillCategories;
+      state.loaded = true
     },
   },
 
   //actionのコミットを使うことでミューテーションを呼び出す（コンポーネントには無い概念）
   actions: {
-    async updateSkillcategories({commit}) {
+    async updataSkillCategories({commit}) {
+      //skillCategoriesの定義
       const skillCategories = [];
-      const res = await axios.get('https://us-central1-portfolio-de069.cloudfunctions.net/users');
-      res.date.forEach((category) =>{
+      //持ってくるAPIの指定？
+      const res = await axios.get('https://us-central1-portfolio-de069.cloudfunctions.net/skills');
+      //res.dataでデータを取得
+      res.data.forEach((category) =>{
         skillCategories.push(category);
       });
       commit('setSkillCategories', {skillCategories});
     },
   },
 });
+
+
+
+
+

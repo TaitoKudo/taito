@@ -1,59 +1,72 @@
 {
   "skills": [
     {
-      "category": {
-
-        "front-end": {
-          "HTML": {
-            "score": 3
-          },
-          "CSS": {
-            "score": 3
-          },
-          "Javascript": {
-            "score": 3
-          },
-          "SCSS": {
-            "score": 1
-          },
-          "Vue": {
-            "score": 3
-          }
-        },
-        "back-end": {
-          "Java": {
-            "score": 1
-          },
-          "Ruby": {
-            "score": 1
-          },
-          "RubyOnRails": {
-            "score": 1
-          },
-          "MySQL": {
-            "score": 1
-          }
-        },
-        "devops": {
-          "Linux": {
-            "score": 3
-          },
-          "Node": {
-            "score": 2
-          },
-          "Git": {
-            "score": 4
-          },
-          "GitHub": {
-            "score": 4
-          },
-          "Firebase": {
-            "score": 3
-          }
-        }
-      }
-
-
-    }
-  ]
+      "category":"front-end",
+      "skill" :[{
+        "name" :"HTML",
+        "score" : 3,
+        "backgroundColor":"rgba(181, 26, 26, 0.25)"
+      },{
+        "name" :"CSS",
+        "score" : 3,
+        "backgroundColor":"rgba(181, 26, 26, 0.25)"
+      },{
+        "name" :"Javascript",
+        "score" :3,
+        "backgroundColor":"rgba(181, 26, 26, 0.25)"
+      },{
+        "name" :"SCSS",
+        "score" :2,
+        "backgroundColor":"rgba(181, 26, 26, 0.25)"
+      },{
+        "name" :"Vue",
+        "score" :3,
+        "backgroundColor":"rgba(181, 26, 26, 0.25)"
+      }]
+    },
+    {
+      "category" :"Back-end",
+      "skill" :[{
+        "name" : "Java",
+        "score" : 1,
+        "backgroundColor":"rgba(15, 136, 57, 0.25)"
+      },{
+        "name" : "Ruby",
+        "score" : 1,
+        "backgroundColor":"rgba(15, 136, 57, 0.25)"
+      },{
+        "name" : "RubyOnRails",
+        "score" : 1,
+        "backgroundColor":"rgba(15, 136, 57, 0.25)"
+      },{
+        "name" : "MySQL",
+        "score" : 1,
+        "backgroundColor":"rgba(15, 136, 57, 0.25)"
+      }]
+    },
+    {
+      "category" :"devops",
+      "skill" :[{
+        "name" : "Linux",
+        "score" : 3,
+        "backgroundColor":"rgba(87, 16, 131, 0.25)"
+      },{
+        "name" : "Node",
+        "score" : 2,
+        "backgroundColor":"rgba(87, 16, 131, 0.25)"
+      },{
+        "name" : "Git",
+        "score" : 4,
+        "backgroundColor":"rgba(87, 16, 131, 0.25)"
+      },{
+        "name" : "GitHub",
+        "score" : 4,
+        "backgroundColor":"rgba(87, 16, 131, 0.25)"
+      },{
+        "name" : "Firebase",
+        "score" : 3,
+        "backgroundColor":"rgba(87, 16, 131, 0.25)"
+      }]
+  }
+]
 }

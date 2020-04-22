@@ -2,7 +2,7 @@
 import { Radar } from '../../../portfolio/node_modules/vue-chartjs';
 
 export default {
-  name: 'Chart',
+  name: 'BackChart',
   extends: Radar,
   data () {
     return {
@@ -11,10 +11,8 @@ export default {
         datasets: [
           {
             label: 'Bar Dataset',
-            data: [1, 1, 1, 1],
-            backgroundColor: [
-              'rgba(15, 136, 57, 0.25)',
-            ],
+            data: [],
+            backgroundColor: [],
             borderColor: [
               'rgba(15, 136, 57, 0.75)',
               'rgba(15, 136, 57, 0.75)',
@@ -44,7 +42,24 @@ export default {
     }
   },
   mounted () {
+    this.getSkillName()
+    this.getSkillScore()
+    this.getBGColor()
     this.renderChart(this.data, this.options)
+  },
+  methods:{
+    getSkillName(){
+      const names = this.$store.getters.skillNameB
+      this.data.labels = names
+    },
+    getSkillScore(){
+      const scores = this.$store.getters.skillScoreB
+      this.data.datasets[0].data = scores
+    },
+    getBGColor(){
+      const backgroundColors = this.$store.getters.skillBackgroundColorB
+      this.data.datasets[0].backgroundColor = backgroundColors
+    }
   }
 }
 
