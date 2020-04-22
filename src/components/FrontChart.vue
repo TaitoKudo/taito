@@ -7,14 +7,12 @@ export default {
   data () {
     return {
       data: {
-        labels: ['HTML', 'CSS', 'Javascript', 'SCSS','Vue'],
+        labels: [],
         datasets: [
           {
-            label: '',
-            data: [3, 3, 3, 1, 3],
-            backgroundColor: [
-              'rgba(181, 26, 26, 0.25)',
-            ],
+            label: [],
+            data: [],
+            backgroundColor: [],
             borderColor: [
               'rgba(181, 26, 26, 0.75)',
               'rgba(181, 26, 26, 0.75)',
@@ -45,9 +43,30 @@ export default {
       }
     }
   },
+  /* 動作をしてくださいの指令*/
   mounted () {
+    this.getSkillName()
+    this.getSkillScore()
+    this.getBGColor()
     this.renderChart(this.data, this.options)
+  },
+  /*計算式何をするのか*/
+  methods:{
+    getSkillName(){
+      const names = this.$store.getters.skillName
+      this.data.labels = names
+    },
+    getSkillScore(){
+      const scores = this.$store.getters.skillScore
+      this.data.datasets[0].data = scores
+    },
+    getBGColor(){
+      const backgroundColors = this.$store.getters.skillBackgroundColor
+      this.data.datasets[0].backgroundColor = backgroundColors
+    }
   }
 }
+
+
 
 </script>
