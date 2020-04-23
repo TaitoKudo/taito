@@ -16,7 +16,9 @@
   import Skill from './components/Skill.vue'
   import Vision from './components/Vision.vue'
   import Footer from './components/Footer.vue'
+  import {mapActions} from 'vuex'
   export default {
+    name: 'App',
     components: {
       Header,
       Main,
@@ -24,8 +26,25 @@
       Skill,
       Vision,
       Footer
+    },
+    data: function() {
+      return {
+        skills: []
+      }
+    },
+
+    computed: {
+      skillCategories() {
+        return this.$store.getters.skillCategories
+      },
+    },
+    mounted() {
+      this.updataSkillCategories();
+    },
+    methods: {
+      ...mapActions(['updataSkillCategories'])
+    }
   }
-}
 </script>
 
 

@@ -2,19 +2,17 @@
 import { Radar } from '../../../portfolio/node_modules/vue-chartjs';
 
 export default {
-  name: 'Chart',
+  name: 'DevChart',
   extends: Radar,
   data () {
     return {
       data: {
-        labels: ['Linux', 'Node', 'Git', 'GitHub', 'Firebase'],
+        labels: [],
         datasets: [
           {
             label: 'Bar Dataset',
-            data: [3, 2, 4, 4, 3],
-            backgroundColor: [
-              'rgba(87, 16, 131, 0.25)',
-            ],
+            data: [],
+            backgroundColor: [],
             borderColor: [
               'rgba(87, 16, 131, 0.75)',
               'rgba(87, 16, 131, 0.75)',
@@ -28,6 +26,9 @@ export default {
       },
       options: {
         scale: {
+          pointLabels: {
+            fontSize: 22,
+          },
           ticks:{
             stepSize: 1,
             beginAtZero: true,
@@ -42,7 +43,24 @@ export default {
     }
   },
   mounted () {
+    this.getSkillName()
+    this.getSkillScore()
+    this.getBGColor()
     this.renderChart(this.data, this.options)
+  },
+  methods:{
+    getSkillName(){
+      const names = this.$store.getters.skillNameD
+      this.data.labels = names
+    },
+    getSkillScore(){
+      const scores = this.$store.getters.skillScoreD
+      this.data.datasets[0].data = scores
+    },
+    getBGColor(){
+      const backgroundColors = this.$store.getters.skillBackgroundColorD
+      this.data.datasets[0].backgroundColor = backgroundColors
+    }
   }
 }
 
