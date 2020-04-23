@@ -134,7 +134,10 @@ export default new Vuex.Store({
       //skillCategoriesの定義
       const skillCategories = [];
       //持ってくるAPIの指定？
-      const res = await axios.get('https://us-central1-portfolio-de069.cloudfunctions.net/skills');
+      const functionsUrl = 'https://us-central1-' + process.env.VUE_APP_FUNCTIONS_API + '.cloudfunctions.net/skills';
+      /* eslint-disable no-debugger */
+      debugger
+      const res = await axios.get(functionsUrl);
       //res.dataでデータを取得
       res.data.forEach((category) =>{
         skillCategories.push(category);
