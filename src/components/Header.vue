@@ -55,7 +55,7 @@
   text-align: center;
   color: #2c3e50;
   margin: 0;
-  width: 800px;
+  width: 100%;
   background-color: #f3f3f3;
   padding-top: 15px;
   padding-left: 10px;

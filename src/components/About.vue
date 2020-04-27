@@ -24,7 +24,8 @@ export default {
     background-color: #f5f5f5;
     width: 100%;
     height: auto;
-    padding: 10px 30px 30px 30px;
+    padding-top: 45px;
+    padding-bottom: 40px;
   }
 
   #aboutTitle {
@@ -36,12 +37,13 @@ export default {
   }
 
   #aboutExplain {
+    display: inline-block;
     color: #707070;
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 12pt;
     word-break: normal;
-    width: 90%;
-    padding-left: 10%;
+    width: 650px;
+    text-align: center;
     line-height: 1.25em;
   }
 </style>
