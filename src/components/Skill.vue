@@ -123,7 +123,7 @@ export default {
     width: 100%;
     height: auto;
     font-family: 'Noto Sans JP', sans-serif;
-    padding: 10px 30px 30px 30px;
+    padding: 45px 30px 30px 30px;
   }
 
   #skillTitle {
@@ -135,12 +135,13 @@ export default {
   }
 
   #skillExplain {
+    display: inline-block;
     color: #707070;
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 12pt;
     word-break: o-all;
-    width: 90%;
-    padding-left: 10%;
+    width: 650px;
+    text-align: center;
     padding-bottom: 5px;
     line-height: 1.25em;
   }
@@ -235,8 +236,10 @@ export default {
   }
 
   #skillGraph {
+    display: inline-block;
+    text-align: center;
     margin: 0 auto;
-    width: 50%;
+    width: 400px;
     height: auto;
   }
 

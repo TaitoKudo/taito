@@ -28,7 +28,8 @@ export default {
     background: linear-gradient(#80e1f7, #06c1e6);
     width: 100%;
     height: auto;
-    padding: 60px 30px 40px 30px;
+    padding-top: 60px;
+    padding-bottom: 30px;
   }
 
   #userName {

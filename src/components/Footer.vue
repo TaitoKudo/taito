@@ -12,7 +12,6 @@
     <div id="footerCopyright">
       ©Seattleconsulting
     </div>
-    <img src="">
   </div>
 </template>
 <script>
@@ -21,7 +20,7 @@ export default {
     clickSmoothScroll () {
       event.preventDefault()
       this.$SmoothScroll(
-        document.querySelector('#headerSection'),
+        document.querySelector('#mainSection'),
         400,
         null,
         null,
@@ -39,16 +38,15 @@ export default {
     display: block;
     background: linear-gradient(#80e1f7, #06c1e6);
     width: 100%;
-    height: auto;
+    height: 100%;
   }
 
   #footerCopyright {
     color: rgb(252, 252, 252);
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 18pt;
-
-    /* 影のサイズ考える */
     text-shadow: -1px -2px 3px #808080;
+    padding-bottom: 20px;
   }
 
   #arrow {
