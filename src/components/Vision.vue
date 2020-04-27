@@ -33,13 +33,12 @@
   }
 
   #visionExplain {
+    display: inline-block;
     color: #707070;
     font-size: 12pt;
     word-break: normal;
-    width: 90%;
-    padding-left: 10%;
-
-    /* 問題あり？ */
+    width: 650px;
+    text-align: center;
     line-height: 1.25em;
   }
 

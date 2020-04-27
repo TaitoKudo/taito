@@ -14,7 +14,7 @@
       style="list-style: disc;"
     >
       <li @click="closeMenu">
-        <a href="#headerSection">Home</a>
+        <a href="#mainSection">Home</a>
       </li>
       <li @click="closeMenu">
         <a href="#aboutSection">About Me</a>
