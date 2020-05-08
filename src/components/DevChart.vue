@@ -47,7 +47,6 @@ export default {
   mounted () {
     this.getSkillName()
     this.getSkillScore()
-    this.getBGColor()
     this.renderChart(this.data, this.options)
   },
   methods:{
@@ -58,10 +57,6 @@ export default {
     getSkillScore(){
       const scores = this.$store.getters.skillScoreD
       this.data.datasets[0].data = scores
-    },
-    getBGColor(){
-      const backgroundColors = this.$store.getters.skillBackgroundColorD
-      this.data.datasets[0].backgroundColor = backgroundColors
     }
   }
 }

@@ -17,72 +17,6 @@ export default new Vuex.Store({
   getters: {
     skillName: (state) => {
       const skillNameArray =[]
-      if(state.skillCategories[0]){
-        /* eslint-disable no-debugger */
-        debugger
-        state.skillCategories[0].skill.forEach((names) => {
-          skillNameArray.push(names.name)
-        })
-      }
-      return skillNameArray
-    },
-    skillScore: (state) => {
-      const skillScoreArray =[]
-      if(state.skillCategories[0]){
-        /* eslint-disable no-debugger */
-        debugger
-        state.skillCategories[0].skill.forEach((scores) => {
-          skillScoreArray.push(scores.score)
-        })
-      }
-      return skillScoreArray
-    },
-    skillBackgroundColor: (state) => {
-      const skillBGArray =[]
-      if(state.skillCategories[0]){
-        /* eslint-disable no-debugger */
-        debugger
-        state.skillCategories[0].skill.forEach((backgroundColors) => {
-          skillBGArray.push(backgroundColors.backgroundColor)
-        })
-      }
-      return skillBGArray
-    },
-    skillNameB: (state) => {
-      const skillNameArray =[]
-      if(state.skillCategories[1]){
-        /* eslint-disable no-debugger */
-        debugger
-        state.skillCategories[1].skill.forEach((names) => {
-          skillNameArray.push(names.name)
-        })
-      }
-      return skillNameArray
-    },
-    skillScoreB: (state) => {
-      const skillScoreArray =[]
-      if(state.skillCategories[1]){
-        /* eslint-disable no-debugger */
-        debugger
-        state.skillCategories[1].skill.forEach((scores) => {
-          skillScoreArray.push(scores.score)
-        })
-      }
-      return skillScoreArray
-    },
-    skillBackgroundColorB: (state) => {
-      const skillBGArray =[]
-      if(state.skillCategories[1]){
-        /* eslint-disable no-debugger */
-        debugger
-        state.skillCategories[1].skill.forEach((backgroundColors) => {
-          skillBGArray.push(backgroundColors.backgroundColor)
-        })
-      }
-      return skillBGArray
-    },
-    skillNameD: (state) => {
-      const skillNameArray =[]
       if(state.skillCategories[2]){
         /* eslint-disable no-debugger */
         debugger
@@ -92,7 +26,7 @@ export default new Vuex.Store({
       }
       return skillNameArray
     },
-    skillScoreD: (state) => {
+    skillScore: (state) => {
       const skillScoreArray =[]
       if(state.skillCategories[2]){
         /* eslint-disable no-debugger */
@@ -103,12 +37,56 @@ export default new Vuex.Store({
       }
       return skillScoreArray
     },
-    skillBackgroundColorD: (state) => {
-      const skillBGArray =[]
-      if(state.skillCategories[2]){
+    skillNameB: (state) => {
+      const skillNameArray =[]
+      if(state.skillCategories[0]){
         /* eslint-disable no-debugger */
         debugger
-        state.skillCategories[2].skill.forEach((backgroundColors) => {
+        state.skillCategories[0].skill.forEach((names) => {
+          skillNameArray.push(names.name)
+        })
+      }
+      return skillNameArray
+    },
+    skillScoreB: (state) => {
+      const skillScoreArray =[]
+      if(state.skillCategories[0]){
+        /* eslint-disable no-debugger */
+        debugger
+        state.skillCategories[0].skill.forEach((scores) => {
+          skillScoreArray.push(scores.score)
+        })
+      }
+      return skillScoreArray
+    },
+    skillNameD: (state) => {
+      const skillNameArray =[]
+      if(state.skillCategories[1]){
+        /* eslint-disable no-debugger */
+        debugger
+        state.skillCategories[1].skill.forEach((names) => {
+          skillNameArray.push(names.name)
+        })
+      }
+      return skillNameArray
+    },
+    skillScoreD: (state) => {
+      const skillScoreArray =[]
+      if(state.skillCategories[1]){
+        /* eslint-disable no-debugger */
+        debugger
+        state.skillCategories[1].skill.forEach((scores) => {
+          skillScoreArray.push(scores.score)
+        })
+      }
+      return skillScoreArray
+    },
+    skillBackgroundColorD: (state) => {
+      const skillBGArray =[]
+      if(state.skillCategories[1]){
+        /* eslint-disable no-debugger */
+        debugger
+        state.skillCategories[1].skill.forEach((backgroundColors) => {
           skillBGArray.push(backgroundColors.backgroundColor)
         })
       }
