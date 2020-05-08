@@ -12,7 +12,9 @@ export default {
           {
             label: [],
             data: [],
-            backgroundColor: [],
+            backgroundColor: [
+              'rgba(181, 26, 26, 0.25'
+            ],
             borderColor: [
               'rgba(181, 26, 26, 0.75)',
               'rgba(181, 26, 26, 0.75)',
@@ -47,7 +49,6 @@ export default {
   mounted () {
     this.getSkillName()
     this.getSkillScore()
-    this.getBGColor()
     this.renderChart(this.data, this.options)
   },
   /*計算式何をするのか*/
@@ -59,10 +60,6 @@ export default {
     getSkillScore(){
       const scores = this.$store.getters.skillScore
       this.data.datasets[0].data = scores
-    },
-    getBGColor(){
-      const backgroundColors = this.$store.getters.skillBackgroundColor
-      this.data.datasets[0].backgroundColor = backgroundColors
     }
   }
 }

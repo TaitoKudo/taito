@@ -12,7 +12,9 @@ export default {
           {
             label: 'Bar Dataset',
             data: [],
-            backgroundColor: [],
+            backgroundColor: [
+              'rgba(15, 136, 57, 0.25)'
+            ],
             borderColor: [
               'rgba(15, 136, 57, 0.75)',
               'rgba(15, 136, 57, 0.75)',
@@ -44,7 +46,6 @@ export default {
   mounted () {
     this.getSkillName()
     this.getSkillScore()
-    this.getBGColor()
     this.renderChart(this.data, this.options)
   },
   methods:{
@@ -55,10 +56,6 @@ export default {
     getSkillScore(){
       const scores = this.$store.getters.skillScoreB
       this.data.datasets[0].data = scores
-    },
-    getBGColor(){
-      const backgroundColors = this.$store.getters.skillBackgroundColorB
-      this.data.datasets[0].backgroundColor = backgroundColors
     }
   }
 }
