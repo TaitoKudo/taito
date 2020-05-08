@@ -81,17 +81,17 @@ export default new Vuex.Store({
       }
       return skillScoreArray
     },
-    skillBackgroundColorD: (state) => {
-      const skillBGArray =[]
-      if(state.skillCategories[1]){
-        /* eslint-disable no-debugger */
-        debugger
-        state.skillCategories[1].skill.forEach((backgroundColors) => {
-          skillBGArray.push(backgroundColors.backgroundColor)
-        })
-      }
-      return skillBGArray
-    },
+    // skillBackgroundColorD: (state) => {
+    //   const skillBGArray =[]
+    //   if(state.skillCategories[1]){
+    //     /* eslint-disable no-debugger */
+    //     debugger
+    //     state.skillCategories[1].skill.forEach((backgroundColors) => {
+    //       skillBGArray.push(backgroundColors.backgroundColor)
+    //     })
+    //   }
+    //   return skillBGArray
+    // },
   },
 
   //mutations:コンポーネントでいうmethod（と言うかsetter）
