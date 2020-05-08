@@ -12,7 +12,9 @@ export default {
           {
             label: 'Bar Dataset',
             data: [],
-            backgroundColor: [],
+            backgroundColor: [
+              'rgba(87, 16, 131, 0.25)'
+            ],
             borderColor: [
               'rgba(87, 16, 131, 0.75)',
               'rgba(87, 16, 131, 0.75)',

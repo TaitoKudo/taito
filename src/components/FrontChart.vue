@@ -12,7 +12,9 @@ export default {
           {
             label: [],
             data: [],
-            backgroundColor: [],
+            backgroundColor: [
+              'rgba(181, 26, 26, 0.25'
+            ],
             borderColor: [
               'rgba(181, 26, 26, 0.75)',
               'rgba(181, 26, 26, 0.75)',
